@@ -3,48 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Movie Ticket Booking</title>
+    <title>Prateek's Cinema - Movie Ticket Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="tickets">
-        <div class="ticket-selector">
-            <h1 class="title">Prateek's Cinema</h1>
-            <div class="movie-select">
-                <select id="movieSelect">
-                    <option value="12">Avengers: Endgame ($12)</option>
-                    <option value="10">The Lion King ($10)</option>
-                    <option value="8">Toy Story 4 ($8)</option>
-                    <option value="15">Joker ($15)</option>
-                </select>
-            </div>
-            <div class="seats">
-                <div class="status">
+    <div class="container">
+        <div class="tickets">
+            <div class="ticket-selector">
+                <h1 class="title">Prateek's Cinema</h1>
+                <div class="movie-select">
+                    <select id="movieSelect">
+                        <option value="12">Avengers: Endgame ($12)</option>
+                        <option value="10">The Lion King ($10)</option>
+                        <option value="8">Toy Story 4 ($8)</option>
+                        <option value="15">Joker ($15)</option>
+                    </select>
+                </div>
+                <div class="seats">
+                    <div class="screen">
+                        <div class="screen-text">Screen</div>
+                    </div>
+                    <div class="all-seats" id="seatContainer"></div>
+                </div>
+                <div class="seat-status">
                     <div class="status-item available">Available</div>
                     <div class="status-item booked">Booked</div>
                     <div class="status-item selected">Selected</div>
                 </div>
-                <div class="all-seats" id="seatContainer"></div>
-                <div class="screen"></div>
+                <div class="timings">
+                    <h2>Select Date & Time</h2>
+                    <div class="dates" id="dateContainer"></div>
+                    <div class="times" id="timeContainer"></div>
+                </div>
             </div>
-            <div class="timings">
-                <div class="dates" id="dateContainer"></div>
-                <div class="times" id="timeContainer"></div>
+            <div class="price">
+                <h2>Booking Summary</h2>
+                <div class="price-details">
+                    <span>Tickets (<span id="ticketCount">0</span>):</span>
+                    <span>$<span id="ticketTotal">0</span></span>
+                </div>
+                <div class="price-details">
+                    <span>Convenience Fee:</span>
+                    <span>$<span id="convenienceFee">0</span></span>
+                </div>
+                <div class="total">
+                    <span>Total:</span>
+                    <span>$<span id="totalAmount">0</span></span>
+                </div>
+                <button class="book-btn" id="bookBtn">Book Now</button>
             </div>
-        </div>
-        <div class="price">
-            <div class="price-details">
-                <span>Tickets (<span id="ticketCount">0</span>):</span>
-                <span>$<span id="ticketTotal">0</span></span>
-            </div>
-            <div class="price-details">
-                <span>Convenience Fee:</span>
-                <span>$<span id="convenienceFee">0</span></span>
-            </div>
-            <div class="total">
-                Total: $<span id="totalAmount">0</span>
-            </div>
-            <button class="book-btn" id="bookBtn">Book Now</button>
         </div>
     </div>
 
@@ -52,10 +60,10 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Booking Confirmation</h2>
-            <p id="modalContent"></p>
+            <div id="modalContent"></div>
         </div>
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

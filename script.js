@@ -132,3 +132,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+updateTotal();
+document.querySelector('input[name="date"]').checked = true;
+document.querySelector('input[name="time"]').checked = true;
