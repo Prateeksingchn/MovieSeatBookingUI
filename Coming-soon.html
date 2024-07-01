@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon - Prateek's Cinema</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #667eea;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: #f0f4ff;
+        }
+        .coming-soon {
+            padding: 60px 0;
+        }
+        .coming-soon h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .movie-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+        .movie-poster {
+            width: 100%;
+            height: 375px;
+            object-fit: cover;
+        }
+        .movie-info {
+            padding: 20px;
+        }
+        .movie-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+        }
+        .movie-details {
+            font-size: 0.9rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .movie-description {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .release-date {
+            font-weight: 600;
+            color: #667eea;
+        }
+        footer {
+            background-color: #667eea;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #f0f4ff;
+        }
+        @media (max-width: 768px) {
+            .movie-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Prateek's Cinema</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Book Tickets</a></li>
+                    <li><a href="Now-showing.html">Now Showing</a></li>
+                    <li><a href="#" class="active">Coming Soon</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="coming-soon">
+            <h2>Coming Soon to Our Screens</h2>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <img src="/api/placeholder/250/375" alt="Movie 1 Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Galactic Odyssey</h3>
+                        <p class="movie-details">Sci-Fi | Adventure | 160 min</p>
+                        <p class="movie-description">A thrilling space adventure that takes viewers on a journey across the universe, exploring new worlds and facing unknown dangers.</p>
+                        <p class="release-date">Release Date: August 15, 2024</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="/api/placeholder/250/375" alt="Movie 2 Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Whispers in the Wind</h3>
+                        <p class="movie-details">Drama | Romance | 130 min</p>
+                        <p class="movie-description">A touching love story set against the backdrop of a small coastal town, where two unlikely souls find each other amidst life's challenges.</p>
+                        <p class="release-date">Release Date: September 1, 2024</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="/api/placeholder/250/375" alt="Movie 3 Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Cyber Heist</h3>
+                        <p class="movie-details">Action | Thriller | 145 min</p>
+                        <p class="movie-description">A high-stakes technological thriller about a team of elite hackers trying to prevent a global cyber attack that threatens to destabilize the world economy.</p>
+                        <p class="release-date">Release Date: September 22, 2024</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="/api/placeholder/250/375" alt="Movie 4 Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Last Laugh</h3>
+                        <p class="movie-details">Comedy | 110 min</p>
+                        <p class="movie-description">A hilarious comedy about a retiring stand-up comedian who embarks on one final tour, rediscovering his passion for laughter along the way.</p>
+                        <p class="release-date">Release Date: October 5, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Prateek's Cinema. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

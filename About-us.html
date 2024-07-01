@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Prateek's Cinema</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #667eea;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f0f4ff;
+        }
+        .about-us {
+            padding: 60px 0;
+        }
+        .about-us h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .about-us h3 {
+            font-size: 1.8rem;
+            color: #4a4a4a;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .about-us p {
+            margin-bottom: 20px;
+        }
+        .features ul {
+            list-style-type: none;
+        }
+        .features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .features i {
+            color: #667eea;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .team-member img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #667eea;
+        }
+        .team-member h4 {
+            margin-bottom: 5px;
+            color: #4a4a4a;
+        }
+        .team-member p {
+            color: #667eea;
+        }
+        .contact {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact p {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #667eea;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #f0f4ff;
+        }
+        @media (max-width: 768px) {
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-member {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Prateek's Cinema</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Book Tickets</a></li>
+                    <li><a href="Now-showing.html">Now Showing</a></li>
+                    <li><a href="Coming-soon.html">Coming Soon</a></li>
+                    <li><a href="about-us.html" class="active">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="about-us">
+            <h2>About Prateek's Cinema</h2>
+            <section class="history">
+                <h3>Our Story</h3>
+                <p>
+                    Founded in 2010, Prateek's Cinema has been bringing the magic of
+                    movies to our community for over a decade. What started as a small,
+                    single-screen theater has grown into a state-of-the-art multiplex,
+                    offering the latest in cinema technology and comfort.
+                </p>
+            </section>
+            <section class="mission">
+                <h3>Our Mission</h3>
+                <p>
+                    At Prateek's Cinema, our mission is to provide an unparalleled
+                    movie-going experience. We strive to offer a diverse selection of
+                    films, from blockbusters to indie gems, in a comfortable and
+                    welcoming environment.
+                </p>
+            </section>
+            <section class="features">
+                <h3>What We Offer</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-film"></i> State-of-the-art projection and sound
+                        systems
+                    </li>
+                    <li><i class="fas fa-couch"></i> Comfortable, reclining seats</li>
+                    <li><i class="fas fa-utensils"></i> Gourmet concession stand</li>
+                    <li>
+                        <i class="fas fa-wheelchair"></i> Accessibility features for all
+                        patrons
+                    </li>
+                    <li>
+                        <i class="fas fa-ticket-alt"></i> Convenient online booking system
+                    </li>
+                </ul>
+            </section>
+            <section class="team">
+                <h3>Meet Our Team</h3>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1719239311459-e27b3b6a7ea2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90b3MtZmVlZHwyNzZ8fHxlbnwwfHx8fHw%3D" alt="Prateek - Founder" />
+                        <h4>Prateek</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1718964313564-a79ff1a60ffa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D" alt="Sarah - Operations Manager" />
+                        <h4>Sarah</h4>
+                        <p>Operations Manager</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1719709950312-6167fa7d0696?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D" alt="Mike - Head Projectionist" />
+                        <h4>Mike</h4>
+                        <p>Head Projectionist</p>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <h3>Contact Us</h3>
+                <p>Have questions or feedback? We'd love to hear from you!</p>
+                <p>Email: info@prateekscinema.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Address: 123 Movie Lane, Cinemaville, CV 12345</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Prateek's Cinema. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

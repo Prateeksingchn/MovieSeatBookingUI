@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek's Cinema - Movie Ticket Booking</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="tickets">
-            <div class="ticket-selector">
-                <h1 class="title">Prateek's Cinema</h1>
+        <header>
+            <h1 class="title">Prateek's Cinema</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Book Tickets</a></li>
+                    <li><a href="Now-showing.html">Now Showing</a></li>
+                    <li><a href="Coming-soon.html">Coming Soon</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="tickets">
+            <section class="ticket-selector">
                 <div class="movie-select">
+                    <label for="movieSelect">Select a Movie:</label>
                     <select id="movieSelect">
                         <option value="12">Avengers: Endgame ($12)</option>
                         <option value="10">The Lion King ($10)</option>
                         <option value="8">Toy Story 4 ($8)</option>
                         <option value="15">Joker ($15)</option>
+                        <option value="13">Inception ($13)</option>
+                        <option value="11">The Dark Knight ($11)</option>
+                        <option value="9">Pulp Fiction ($9)</option>
+                        <option value="14">Interstellar ($14)</option>
                     </select>
                 </div>
                 <div class="seats">
@@ -27,17 +43,17 @@
                     <div class="all-seats" id="seatContainer"></div>
                 </div>
                 <div class="seat-status">
-                    <div class="status-item available">Available</div>
-                    <div class="status-item booked">Booked</div>
-                    <div class="status-item selected">Selected</div>
+                    <div class="status-item available"><i class="fas fa-square"></i> Available</div>
+                    <div class="status-item booked"><i class="fas fa-square"></i> Booked</div>
+                    <div class="status-item selected"><i class="fas fa-square"></i> Selected</div>
                 </div>
                 <div class="timings">
                     <h2>Select Date & Time</h2>
                     <div class="dates" id="dateContainer"></div>
                     <div class="times" id="timeContainer"></div>
                 </div>
-            </div>
-            <div class="price">
+            </section>
+            <aside class="price">
                 <h2>Booking Summary</h2>
                 <div class="price-details">
                     <span>Tickets (<span id="ticketCount">0</span>):</span>
@@ -52,10 +68,10 @@
                     <span>$<span id="totalAmount">0</span></span>
                 </div>
                 <button class="book-btn" id="bookBtn">Book Now</button>
-            </div>
-        </div>
+            </aside>
+        </main>
     </div>
-
+    
     <div id="bookingModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -63,6 +79,15 @@
             <div id="modalContent"></div>
         </div>
     </div>
+    
+    <footer>
+        <p>&copy; 2024 Prateek's Cinema. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Now Showing - Prateek's Cinema</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #667eea;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: #f0f4ff;
+        }
+        .now-showing {
+            padding: 60px 0;
+        }
+        .now-showing h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .movie-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        .movie-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .movie-item {
+                flex-direction: row;
+            }
+        }
+        .movie-poster {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+        }
+        .movie-details {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .movie-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+        }
+        .movie-info {
+            font-size: 0.9rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .movie-description {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .showtimes {
+            margin-top: 15px;
+        }
+        .showtime-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+        }
+        .showtime-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .showtime-btn {
+            background-color: #667eea;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .showtime-btn:hover {
+            background-color: #5a6fd6;
+        }
+        footer {
+            background-color: #667eea;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #f0f4ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Prateek's Cinema</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Book Tickets</a></li>
+                    <li><a href="#" class="active">Now Showing</a></li>
+                    <li><a href="Coming-soon.html">Coming Soon</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="now-showing">
+            <h2>Now Showing</h2>
+            <div class="movie-list">
+                <div class="movie-item">
+                    <img src="/api/placeholder/300/450" alt="Movie 1 Poster" class="movie-poster">
+                    <div class="movie-details">
+                        <h3 class="movie-title">The Quantum Paradox</h3>
+                        <p class="movie-info">Sci-Fi | Thriller | 140 min</p>
+                        <p class="movie-description">A mind-bending journey through time and space as a brilliant physicist attempts to unravel the mysteries of the universe, only to find herself caught in a paradox of her own making.</p>
+                        <div class="showtimes">
+                            <h4 class="showtime-title">Today's Showtimes:</h4>
+                            <div class="showtime-list">
+                                <button class="showtime-btn">10:00 AM</button>
+                                <button class="showtime-btn">1:30 PM</button>
+                                <button class="showtime-btn">4:45 PM</button>
+                                <button class="showtime-btn">8:00 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item">
+                    <img src="/api/placeholder/300/450" alt="Movie 2 Poster" class="movie-poster">
+                    <div class="movie-details">
+                        <h3 class="movie-title">Echoes of the Heart</h3>
+                        <p class="movie-info">Drama | Romance | 120 min</p>
+                        <p class="movie-description">A poignant tale of love, loss, and redemption as two estranged siblings reconnect through their shared passion for music, healing old wounds and forging a new path forward.</p>
+                        <div class="showtimes">
+                            <h4 class="showtime-title">Today's Showtimes:</h4>
+                            <div class="showtime-list">
+                                <button class="showtime-btn">11:15 AM</button>
+                                <button class="showtime-btn">2:30 PM</button>
+                                <button class="showtime-btn">5:45 PM</button>
+                                <button class="showtime-btn">9:00 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item">
+                    <img src="/api/placeholder/300/450" alt="Movie 3 Poster" class="movie-poster">
+                    <div class="movie-details">
+                        <h3 class="movie-title">Guardians of the Realm</h3>
+                        <p class="movie-info">Fantasy | Adventure | 150 min</p>
+                        <p class="movie-description">In a world where magic and technology collide, a group of unlikely heroes must band together to protect their realm from an ancient evil that threatens to destroy everything they hold dear.</p>
+                        <div class="showtimes">
+                            <h4 class="showtime-title">Today's Showtimes:</h4>
+                            <div class="showtime-list">
+                                <button class="showtime-btn">10:30 AM</button>
+                                <button class="showtime-btn">2:00 PM</button>
+                                <button class="showtime-btn">5:30 PM</button>
+                                <button class="showtime-btn">9:15 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Prateek's Cinema. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

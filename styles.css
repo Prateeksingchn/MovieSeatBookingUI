@@ -9,9 +9,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    flex-direction: column;
     color: #333;
 }
 
@@ -20,29 +18,61 @@ body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    width: 100%;
+    max-width: 1200px;
+    width: 95%;
+    margin: 20px auto;
+    flex-grow: 1;
 }
 
-.tickets {
-    display: flex;
-    flex-direction: column;
-}
-
-.ticket-selector {
-    padding: 30px;
+header {
+    background: #667eea;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 .title {
     font-size: 32px;
     font-weight: 600;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ffd700;
+}
+
+main {
+    display: flex;
+    padding: 30px;
+}
+
+.ticket-selector {
+    flex: 2;
+    padding-right: 30px;
 }
 
 .movie-select {
     margin-bottom: 30px;
+}
+
+.movie-select label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .movie-select select {
@@ -164,25 +194,20 @@ input:checked + .seat {
     font-size: 14px;
 }
 
-.status-item::before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    margin-right: 8px;
-    border-radius: 3px;
+.status-item i {
+    margin-right: 5px;
 }
 
-.status-item.available::before {
-    background: #f0f0f0;
-    border: 1px solid #ddd;
+.status-item.available i {
+    color: #f0f0f0;
 }
 
-.status-item.booked::before {
-    background: #ff6b6b;
+.status-item.booked i {
+    color: #ff6b6b;
 }
 
-.status-item.selected::before {
-    background: #667eea;
+.status-item.selected i {
+    color: #667eea;
 }
 
 .timings {
@@ -224,9 +249,10 @@ input:checked + .time-item {
 }
 
 .price {
+    flex: 1;
     background: #f8f9fa;
     padding: 30px;
-    border-top: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 .price h2 {
@@ -319,9 +345,37 @@ input:checked + .time-item {
     color: #333;
 }
 
+footer {
+    background: #667eea;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+}
+
 @media (max-width: 768px) {
-    .tickets {
+    main {
         flex-direction: column;
+    }
+
+    .ticket-selector {
+        padding-right: 0;
+        margin-bottom: 30px;
     }
 
     .all-seats {
